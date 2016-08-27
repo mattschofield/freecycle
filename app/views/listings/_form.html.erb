@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :type %><br>
-    <%= f.text_field :type %>
+    <%= f.select :type, ["Request", "Offer"] %>
   </div>
   <div class="actions">
     <%= f.submit %>
