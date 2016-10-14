@@ -23,6 +23,7 @@ default: &default
 
 development: &default
   adapter: postgresql
+  database: freecycle_development
   encoding: unicode
   pool: 5
 
@@ -84,3 +85,4 @@ production:
   database: freecycle_production
   username: freecycle
   password: <%= ENV['FREECYCLE_DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_URL'] %>
