@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   resources :areas
-
   resources :listings
-  resources :request, controller: 'listings', type: 'Request'
-  resources :offer, controller: 'listings', type: 'Offer'
-
+  resources :requests
+  resources :offers
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
