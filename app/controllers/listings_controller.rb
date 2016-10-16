@@ -1,10 +1,11 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize
 
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = current_user.listings
   end
 
   # GET /listings/1
@@ -14,7 +15,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/new
   def new
-    @listing = Listing.new
+    @listing = current_user.listings.new
   end
 
   # GET /listings/1/edit
@@ -24,7 +25,7 @@ class ListingsController < ApplicationController
   # POST /listings
   # POST /listings.json
   def create
-    @listing = Listing.new(listing_params)
+    @listing = current_user.listings.new(listing_params)
 
     respond_to do |format|
       if @listing.save

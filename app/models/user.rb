@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :listings
+  has_many :user_listings
+  has_many :listings, :through => :user_listings
 
   has_secure_password
 
