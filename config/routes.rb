@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  # These routes will be for signup. The first renders a form in the browse, the second will
+  # receive the form and create a user in our database using the data given to us by the user.
+  get '/register' => 'users#new'
+  post '/users' => 'users#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
