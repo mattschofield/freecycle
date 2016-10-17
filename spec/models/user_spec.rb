@@ -34,4 +34,9 @@ describe User do
     user = build(:user, password: "abcde", password_confirmation: "edcba")
     expect(user.valid?).to be false
   end
+
+  it "doesn't allow duplicate email addresses" do
+    a = create(:user, email: "matt@free.cycle")
+    expect(build(:user, email: "matt@free.cycle").valid?).to be false
+  end
 end
