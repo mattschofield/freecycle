@@ -47,6 +47,8 @@ group :development, :test do
   gem 'byebug'
   gem 'capybara', '>= 2.2.0'
   gem 'rspec-rails'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'faker'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
