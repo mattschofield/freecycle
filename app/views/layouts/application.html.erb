@@ -3,12 +3,17 @@
 <head>
   <title>Freecycle</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render :partial => 'shared/navbar' %>
 
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 
+  <%= javascript_include_tag "https://use.fontawesome.com/fe8336bee6.js" %>
 </body>
 </html>

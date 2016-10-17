@@ -1,0 +1,63 @@
+<div class="container">
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="nav-item is-brand" href="/">
+        FREECYCLABLE
+      </a>
+    </div>
+
+    <div class="nav-center">
+      <a class="nav-item" href="/">
+        <span class="icon">
+          <i class="fa fa-smile-o"></i>
+        </span>
+      </a>
+    </div>
+
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+
+    <div class="nav-right nav-menu">
+      <a class="nav-item" href="#">
+        Blog
+      </a>
+
+      <span class="nav-item">
+        <% if current_user.present? %>
+          <a class="button" href="/listings">
+            <span class="icon">
+              <i class="fa fa-bars"></i>
+            </span>
+            <span>Listings</span>
+          </a>
+          <a class="button" href="#">
+            <span class="icon">
+              <i class="fa fa-comments-o"></i>
+            </span>
+            <span>Messages</span>
+          </a>
+          <a class="button is-danger" href="/logout">
+            <span class="icon">
+              <i class="fa fa-sign-out"></i>
+            </span>
+            <span>
+              Sign Out
+            </span>
+          </a>
+        <% else %>
+          <a class="button is-primary" href="/login">
+            <span class="icon">
+              <i class="fa fa-sign-in"></i>
+            </span>
+            <span>
+              Sign In
+            </span>
+          </a>
+        <% end %>
+      </span>
+    </div>
+  </nav>
+</div>
